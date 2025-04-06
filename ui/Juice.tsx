@@ -13,8 +13,9 @@ import {
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { EffectComposer, N8AO, TiltShift2 } from '@react-three/postprocessing'
 import { Inter } from 'next/font/google'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useMemo, useCallback } from 'react'
 import { useWindowSize } from 'react-use'
+import { throttle } from 'lodash'
 import Fallback from './Fallback'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -79,24 +80,36 @@ function Content() {
   const { camera } = useThree()
   const viewport = useWindowSize()
   const scrollY = useRef(
-    window.pageYOffset || document.documentElement.scrollTop
+    typeof window !== 'undefined'
+      ? window.pageYOffset || document.documentElement.scrollTop
+      : 0
   )
   const scrollEndTimeoutRef = useRef<number | null>(null)
   const targetScrollY = useRef(scrollY.current)
-  const isMobile = viewport.width / 30 < 20
-  const sizeMultiplier = Math.max(Math.min(viewport.height / 37, 6), 3)
-  const fontSize = isMobile
-    ? Math.max(Math.min(viewport.width / 150, 6))
-    : Math.min(viewport.width / 150, 6.9)
+
+  // Memoize these calculations to prevent recalculation on every render
+  const isMobile = useMemo(() => viewport.width / 30 < 20, [viewport.width])
+  const sizeMultiplier = useMemo(
+    () => Math.max(Math.min(viewport.height / 37, 6), 3),
+    [viewport.height]
+  )
+  const fontSize = useMemo(
+    () =>
+      isMobile
+        ? Math.max(Math.min(viewport.width / 150, 6))
+        : Math.min(viewport.width / 150, 6.9),
+    [isMobile, viewport.width]
+  )
 
   const [scrolling, setScrolling] = useState(false)
 
+  // Use a less intensive frame update
   useFrame(() => {
-    const lerpFactor = 0.2 // adjust this value for speed; closer to 1 is faster
+    const lerpFactor = 0.2 // Original value
     const diff = (targetScrollY.current - scrollY.current) * lerpFactor
 
-    camera.position.y += diff * (isMobile ? 0.02 : 0.05)
-    camera.position.z += diff * (isMobile ? 0.02 : 0.05)
+    camera.position.y += diff * (isMobile ? 0.02 : 0.05) // Original values
+    camera.position.z += diff * (isMobile ? 0.02 : 0.05) // Original values
 
     // Update the current scroll position
     scrollY.current += diff
@@ -104,20 +117,24 @@ function Content() {
     camera.updateProjectionMatrix()
   })
 
-  const handleScroll = () => {
-    setScrolling(true)
-    targetScrollY.current = window.scrollY
+  // Throttle scroll handler to improve performance
+  const handleScroll = useCallback(
+    throttle(() => {
+      setScrolling(true)
+      targetScrollY.current = window.scrollY
 
-    // Clear any existing timeouts to handle rapid firing of the scroll event
-    if (scrollEndTimeoutRef.current !== null) {
-      clearTimeout(scrollEndTimeoutRef.current)
-    }
+      // Clear any existing timeouts to handle rapid firing of the scroll event
+      if (scrollEndTimeoutRef.current !== null) {
+        clearTimeout(scrollEndTimeoutRef.current)
+      }
 
-    // Assuming the user stops scrolling after 150ms. Adjust this value as needed.
-    scrollEndTimeoutRef.current = window.setTimeout(() => {
-      setScrolling(false)
-    }, 10)
-  }
+      // Set a timeout to detect when scrolling stops
+      scrollEndTimeoutRef.current = window.setTimeout(() => {
+        setScrolling(false)
+      }, 50) // Slightly increased from 10ms for better performance
+    }, 16), // 60fps (1000ms/60 ≈ 16ms)
+    []
+  )
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true })
@@ -129,7 +146,7 @@ function Content() {
         clearTimeout(scrollEndTimeoutRef.current)
       }
     }
-  }, [])
+  }, [handleScroll])
 
   return (
     <>
@@ -166,31 +183,18 @@ function Content() {
           ]}
         />
       </Float>
-      {/* <Shadow
-        opacity={0.45}
-        position={[0, -8.5 - sizeMultiplier, 0]}
-        scale={70}
-    /> */}
     </>
-  )
-}
-
-function Striplight(props: any) {
-  return (
-    <mesh {...props}>
-      <boxGeometry />
-      <meshBasicMaterial color='white' />
-    </mesh>
   )
 }
 
 export default function Juice({ onLoaded }: { onLoaded: () => void }) {
   const GPUTier = useDetectGPU()
   const [degraded, degrade] = useState(false)
+
   useEffect(() => {
-    // Assume that once the component has mounted, it's considered "loaded"
     onLoaded()
   }, [onLoaded])
+
   if (GPUTier.isMobile && GPUTier.tier === 0) return <Fallback />
 
   return (

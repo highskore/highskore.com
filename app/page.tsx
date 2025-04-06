@@ -131,7 +131,7 @@ function Contact() {
           website='Email'
         />
         <ContactLink
-          href='https://read.cv/highskore'
+          href='https://hackmd.io/@highskore/HyLNOLeRkl'
           title='highskore'
           website='CV'
         />
