@@ -10,28 +10,31 @@ importers:
     dependencies:
       '@react-three/drei':
         specifier: ^9.78.2
-        version: 9.78.2(@react-three/fiber@8.13.5)(@types/three@0.154.0)(react-dom@18.2.0)(react@18.2.0)(three@0.154.0)
+        version: 9.78.2(@react-three/fiber@8.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(three@0.154.0))(@types/three@0.154.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(three@0.154.0)
       '@react-three/fiber':
         specifier: ^8.13.5
-        version: 8.13.5(react-dom@18.2.0)(react@18.2.0)(three@0.154.0)
+        version: 8.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(three@0.154.0)
       '@react-three/postprocessing':
         specifier: ^2.14.13
-        version: 2.14.13(@react-three/fiber@8.13.5)(@types/three@0.154.0)(react@18.2.0)(three@0.154.0)
+        version: 2.14.13(@react-three/fiber@8.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(three@0.154.0))(@types/three@0.154.0)(react@18.2.0)(three@0.154.0)
       eslint-config-prettier:
         specifier: ^8.8.0
         version: 8.8.0(eslint@8.43.0)
       framer-motion:
         specifier: ^10.12.18
-        version: 10.12.18(react-dom@18.2.0)(react@18.2.0)
+        version: 10.12.18(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      lodash:
+        specifier: ^4.17.21
+        version: 4.17.21
       maath:
         specifier: ^0.7.0
         version: 0.7.0(@types/three@0.154.0)(three@0.154.0)
       next:
         specifier: ^13.4.7
-        version: 13.4.7(react-dom@18.2.0)(react@18.2.0)
+        version: 13.4.7(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       next-themes:
         specifier: ^0.2.1
-        version: 0.2.1(next@13.4.7)(react-dom@18.2.0)(react@18.2.0)
+        version: 0.2.1(next@13.4.7(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -40,7 +43,7 @@ importers:
         version: 18.2.0(react@18.2.0)
       react-use:
         specifier: ^17.4.0
-        version: 17.4.0(react-dom@18.2.0)(react@18.2.0)
+        version: 17.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       suspend-react:
         specifier: ^0.1.3
         version: 0.1.3(react@18.2.0)
@@ -59,7 +62,7 @@ importers:
         version: 18.2.14
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.60.1
-        version: 5.60.1(@typescript-eslint/parser@5.60.1)(eslint@8.43.0)(typescript@5.1.6)
+        version: 5.60.1(@typescript-eslint/parser@5.60.1(eslint@8.43.0)(typescript@5.1.6))(eslint@8.43.0)(typescript@5.1.6)
       '@typescript-eslint/parser':
         specifier: ^5.60.1
         version: 5.60.1(eslint@8.43.0)(typescript@5.1.6)
@@ -74,7 +77,7 @@ importers:
         version: 13.4.7(eslint@8.43.0)(typescript@5.1.6)
       eslint-plugin-prettier:
         specifier: ^4.2.1
-        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
+        version: 4.2.1(eslint-config-prettier@8.8.0(eslint@8.43.0))(eslint@8.43.0)(prettier@2.8.8)
       eslint-plugin-react:
         specifier: ^7.32.2
         version: 7.32.2(eslint@8.43.0)
@@ -83,7 +86,7 @@ importers:
         version: 1.1.2
       eslint-plugin-typescript-sort-keys:
         specifier: ^2.3.0
-        version: 2.3.0(@typescript-eslint/parser@5.60.1)(eslint@8.43.0)(typescript@5.1.6)
+        version: 2.3.0(@typescript-eslint/parser@5.60.1(eslint@8.43.0)(typescript@5.1.6))(eslint@8.43.0)(typescript@5.1.6)
       eslint-plugin-unicorn:
         specifier: ^47.0.0
         version: 47.0.0(eslint@8.43.0)
@@ -2688,24 +2691,24 @@ snapshots:
       '@react-spring/types': 9.6.1
       react: 18.2.0
 
-  '@react-spring/three@9.6.1(@react-three/fiber@8.13.5)(react@18.2.0)(three@0.154.0)':
+  '@react-spring/three@9.6.1(@react-three/fiber@8.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(three@0.154.0))(react@18.2.0)(three@0.154.0)':
     dependencies:
       '@react-spring/animated': 9.6.1(react@18.2.0)
       '@react-spring/core': 9.6.1(react@18.2.0)
       '@react-spring/shared': 9.6.1(react@18.2.0)
       '@react-spring/types': 9.6.1
-      '@react-three/fiber': 8.13.5(react-dom@18.2.0)(react@18.2.0)(three@0.154.0)
+      '@react-three/fiber': 8.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(three@0.154.0)
       react: 18.2.0
       three: 0.154.0
 
   '@react-spring/types@9.6.1': {}
 
-  '@react-three/drei@9.78.2(@react-three/fiber@8.13.5)(@types/three@0.154.0)(react-dom@18.2.0)(react@18.2.0)(three@0.154.0)':
+  '@react-three/drei@9.78.2(@react-three/fiber@8.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(three@0.154.0))(@types/three@0.154.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(three@0.154.0)':
     dependencies:
       '@babel/runtime': 7.22.5
       '@mediapipe/tasks-vision': 0.10.2-rc2
-      '@react-spring/three': 9.6.1(@react-three/fiber@8.13.5)(react@18.2.0)(three@0.154.0)
-      '@react-three/fiber': 8.13.5(react-dom@18.2.0)(react@18.2.0)(three@0.154.0)
+      '@react-spring/three': 9.6.1(@react-three/fiber@8.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(three@0.154.0))(react@18.2.0)(three@0.154.0)
+      '@react-three/fiber': 8.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(three@0.154.0)
       '@use-gesture/react': 10.2.27(react@18.2.0)
       camera-controls: 2.7.0(three@0.154.0)
       detect-gpu: 5.0.33
@@ -2717,7 +2720,6 @@ snapshots:
       meshline: 3.1.6(three@0.154.0)
       react: 18.2.0
       react-composer: 5.0.3(react@18.2.0)
-      react-dom: 18.2.0(react@18.2.0)
       react-merge-refs: 1.1.0
       stats.js: 0.17.0
       suspend-react: 0.1.3(react@18.2.0)
@@ -2727,28 +2729,31 @@ snapshots:
       troika-three-text: 0.47.2(three@0.154.0)
       utility-types: 3.10.0
       zustand: 3.7.2(react@18.2.0)
+    optionalDependencies:
+      react-dom: 18.2.0(react@18.2.0)
     transitivePeerDependencies:
       - '@types/three'
 
-  '@react-three/fiber@8.13.5(react-dom@18.2.0)(react@18.2.0)(three@0.154.0)':
+  '@react-three/fiber@8.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(three@0.154.0)':
     dependencies:
       '@babel/runtime': 7.22.5
       '@types/react-reconciler': 0.26.7
       its-fine: 1.1.1(react@18.2.0)
       react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
       react-reconciler: 0.27.0(react@18.2.0)
-      react-use-measure: 2.1.1(react-dom@18.2.0)(react@18.2.0)
+      react-use-measure: 2.1.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       scheduler: 0.21.0
       suspend-react: 0.1.3(react@18.2.0)
       three: 0.154.0
       zustand: 3.7.2(react@18.2.0)
+    optionalDependencies:
+      react-dom: 18.2.0(react@18.2.0)
 
-  '@react-three/postprocessing@2.14.13(@react-three/fiber@8.13.5)(@types/three@0.154.0)(react@18.2.0)(three@0.154.0)':
+  '@react-three/postprocessing@2.14.13(@react-three/fiber@8.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(three@0.154.0))(@types/three@0.154.0)(react@18.2.0)(three@0.154.0)':
     dependencies:
-      '@react-three/fiber': 8.13.5(react-dom@18.2.0)(react@18.2.0)(three@0.154.0)
+      '@react-three/fiber': 8.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(three@0.154.0)
       maath: 0.6.0(@types/three@0.154.0)(three@0.154.0)
-      n8ao: 1.6.7(postprocessing@6.32.2)(three@0.154.0)
+      n8ao: 1.6.7(postprocessing@6.32.2(three@0.154.0))(three@0.154.0)
       postprocessing: 6.32.2(three@0.154.0)
       react: 18.2.0
       three: 0.154.0
@@ -2823,7 +2828,7 @@ snapshots:
 
   '@types/webxr@0.5.2': {}
 
-  '@typescript-eslint/eslint-plugin@5.60.1(@typescript-eslint/parser@5.60.1)(eslint@8.43.0)(typescript@5.1.6)':
+  '@typescript-eslint/eslint-plugin@5.60.1(@typescript-eslint/parser@5.60.1(eslint@8.43.0)(typescript@5.1.6))(eslint@8.43.0)(typescript@5.1.6)':
     dependencies:
       '@eslint-community/regexpp': 4.5.1
       '@typescript-eslint/parser': 5.60.1(eslint@8.43.0)(typescript@5.1.6)
@@ -2837,6 +2842,7 @@ snapshots:
       natural-compare-lite: 1.4.0
       semver: 7.5.3
       tsutils: 3.21.0(typescript@5.1.6)
+    optionalDependencies:
       typescript: 5.1.6
     transitivePeerDependencies:
       - supports-color
@@ -2856,6 +2862,7 @@ snapshots:
       '@typescript-eslint/typescript-estree': 5.60.1(typescript@5.1.6)
       debug: 4.3.4
       eslint: 8.43.0
+    optionalDependencies:
       typescript: 5.1.6
     transitivePeerDependencies:
       - supports-color
@@ -2872,6 +2879,7 @@ snapshots:
       debug: 4.3.4
       eslint: 8.43.0
       tsutils: 3.21.0(typescript@5.1.6)
+    optionalDependencies:
       typescript: 5.1.6
     transitivePeerDependencies:
       - supports-color
@@ -2887,6 +2895,7 @@ snapshots:
       is-glob: 4.0.3
       semver: 7.5.3
       tsutils: 3.21.0(typescript@5.1.6)
+    optionalDependencies:
       typescript: 5.1.6
     transitivePeerDependencies:
       - supports-color
@@ -3336,11 +3345,12 @@ snapshots:
       '@typescript-eslint/parser': 5.60.1(eslint@8.43.0)(typescript@5.1.6)
       eslint: 8.43.0
       eslint-import-resolver-node: 0.3.7
-      eslint-import-resolver-typescript: 3.5.5(@typescript-eslint/parser@5.60.1)(eslint-import-resolver-node@0.3.7)(eslint-plugin-import@2.27.5)(eslint@8.43.0)
-      eslint-plugin-import: 2.27.5(@typescript-eslint/parser@5.60.1)(eslint-import-resolver-typescript@3.5.5)(eslint@8.43.0)
+      eslint-import-resolver-typescript: 3.5.5(@typescript-eslint/parser@5.60.1(eslint@8.43.0)(typescript@5.1.6))(eslint-import-resolver-node@0.3.7)(eslint-plugin-import@2.27.5)(eslint@8.43.0)
+      eslint-plugin-import: 2.27.5(@typescript-eslint/parser@5.60.1(eslint@8.43.0)(typescript@5.1.6))(eslint-import-resolver-typescript@3.5.5)(eslint@8.43.0)
       eslint-plugin-jsx-a11y: 6.7.1(eslint@8.43.0)
       eslint-plugin-react: 7.32.2(eslint@8.43.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.43.0)
+    optionalDependencies:
       typescript: 5.1.6
     transitivePeerDependencies:
       - eslint-import-resolver-webpack
@@ -3358,13 +3368,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.5.5(@typescript-eslint/parser@5.60.1)(eslint-import-resolver-node@0.3.7)(eslint-plugin-import@2.27.5)(eslint@8.43.0):
+  eslint-import-resolver-typescript@3.5.5(@typescript-eslint/parser@5.60.1(eslint@8.43.0)(typescript@5.1.6))(eslint-import-resolver-node@0.3.7)(eslint-plugin-import@2.27.5)(eslint@8.43.0):
     dependencies:
       debug: 4.3.4
       enhanced-resolve: 5.15.0
       eslint: 8.43.0
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@5.60.1)(eslint-import-resolver-node@0.3.7)(eslint-import-resolver-typescript@3.5.5)(eslint@8.43.0)
-      eslint-plugin-import: 2.27.5(@typescript-eslint/parser@5.60.1)(eslint-import-resolver-typescript@3.5.5)(eslint@8.43.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@5.60.1(eslint@8.43.0)(typescript@5.1.6))(eslint-import-resolver-node@0.3.7)(eslint-import-resolver-typescript@3.5.5(@typescript-eslint/parser@5.60.1(eslint@8.43.0)(typescript@5.1.6))(eslint-import-resolver-node@0.3.7)(eslint-plugin-import@2.27.5)(eslint@8.43.0))(eslint@8.43.0)
+      eslint-plugin-import: 2.27.5(@typescript-eslint/parser@5.60.1(eslint@8.43.0)(typescript@5.1.6))(eslint-import-resolver-typescript@3.5.5)(eslint@8.43.0)
       get-tsconfig: 4.6.2
       globby: 13.2.0
       is-core-module: 2.12.1
@@ -3376,19 +3386,19 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-module-utils@2.8.0(@typescript-eslint/parser@5.60.1)(eslint-import-resolver-node@0.3.7)(eslint-import-resolver-typescript@3.5.5)(eslint@8.43.0):
+  eslint-module-utils@2.8.0(@typescript-eslint/parser@5.60.1(eslint@8.43.0)(typescript@5.1.6))(eslint-import-resolver-node@0.3.7)(eslint-import-resolver-typescript@3.5.5(@typescript-eslint/parser@5.60.1(eslint@8.43.0)(typescript@5.1.6))(eslint-import-resolver-node@0.3.7)(eslint-plugin-import@2.27.5)(eslint@8.43.0))(eslint@8.43.0):
     dependencies:
-      '@typescript-eslint/parser': 5.60.1(eslint@8.43.0)(typescript@5.1.6)
       debug: 3.2.7
+    optionalDependencies:
+      '@typescript-eslint/parser': 5.60.1(eslint@8.43.0)(typescript@5.1.6)
       eslint: 8.43.0
       eslint-import-resolver-node: 0.3.7
-      eslint-import-resolver-typescript: 3.5.5(@typescript-eslint/parser@5.60.1)(eslint-import-resolver-node@0.3.7)(eslint-plugin-import@2.27.5)(eslint@8.43.0)
+      eslint-import-resolver-typescript: 3.5.5(@typescript-eslint/parser@5.60.1(eslint@8.43.0)(typescript@5.1.6))(eslint-import-resolver-node@0.3.7)(eslint-plugin-import@2.27.5)(eslint@8.43.0)
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.27.5(@typescript-eslint/parser@5.60.1)(eslint-import-resolver-typescript@3.5.5)(eslint@8.43.0):
+  eslint-plugin-import@2.27.5(@typescript-eslint/parser@5.60.1(eslint@8.43.0)(typescript@5.1.6))(eslint-import-resolver-typescript@3.5.5)(eslint@8.43.0):
     dependencies:
-      '@typescript-eslint/parser': 5.60.1(eslint@8.43.0)(typescript@5.1.6)
       array-includes: 3.1.6
       array.prototype.flat: 1.3.1
       array.prototype.flatmap: 1.3.1
@@ -3396,7 +3406,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.43.0
       eslint-import-resolver-node: 0.3.7
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@5.60.1)(eslint-import-resolver-node@0.3.7)(eslint-import-resolver-typescript@3.5.5)(eslint@8.43.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@5.60.1(eslint@8.43.0)(typescript@5.1.6))(eslint-import-resolver-node@0.3.7)(eslint-import-resolver-typescript@3.5.5(@typescript-eslint/parser@5.60.1(eslint@8.43.0)(typescript@5.1.6))(eslint-import-resolver-node@0.3.7)(eslint-plugin-import@2.27.5)(eslint@8.43.0))(eslint@8.43.0)
       has: 1.0.3
       is-core-module: 2.12.1
       is-glob: 4.0.3
@@ -3405,6 +3415,8 @@ snapshots:
       resolve: 1.22.2
       semver: 6.3.0
       tsconfig-paths: 3.14.2
+    optionalDependencies:
+      '@typescript-eslint/parser': 5.60.1(eslint@8.43.0)(typescript@5.1.6)
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
@@ -3430,12 +3442,13 @@ snapshots:
       object.fromentries: 2.0.6
       semver: 6.3.0
 
-  eslint-plugin-prettier@4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8):
+  eslint-plugin-prettier@4.2.1(eslint-config-prettier@8.8.0(eslint@8.43.0))(eslint@8.43.0)(prettier@2.8.8):
     dependencies:
       eslint: 8.43.0
-      eslint-config-prettier: 8.8.0(eslint@8.43.0)
       prettier: 2.8.8
       prettier-linter-helpers: 1.0.0
+    optionalDependencies:
+      eslint-config-prettier: 8.8.0(eslint@8.43.0)
 
   eslint-plugin-react-hooks@4.6.0(eslint@8.43.0):
     dependencies:
@@ -3467,7 +3480,7 @@ snapshots:
       natural-compare: 1.4.0
       requireindex: 1.2.0
 
-  eslint-plugin-typescript-sort-keys@2.3.0(@typescript-eslint/parser@5.60.1)(eslint@8.43.0)(typescript@5.1.6):
+  eslint-plugin-typescript-sort-keys@2.3.0(@typescript-eslint/parser@5.60.1(eslint@8.43.0)(typescript@5.1.6))(eslint@8.43.0)(typescript@5.1.6):
     dependencies:
       '@typescript-eslint/experimental-utils': 5.60.1(eslint@8.43.0)(typescript@5.1.6)
       '@typescript-eslint/parser': 5.60.1(eslint@8.43.0)(typescript@5.1.6)
@@ -3665,13 +3678,13 @@ snapshots:
 
   fraction.js@4.2.0: {}
 
-  framer-motion@10.12.18(react-dom@18.2.0)(react@18.2.0):
+  framer-motion@10.12.18(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
       tslib: 2.6.0
     optionalDependencies:
       '@emotion/is-prop-valid': 0.8.8
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
 
   fs.realpath@1.0.0: {}
 
@@ -4121,12 +4134,12 @@ snapshots:
       object-assign: 4.1.1
       thenify-all: 1.6.0
 
-  n8ao@1.6.7(postprocessing@6.32.2)(three@0.154.0):
+  n8ao@1.6.7(postprocessing@6.32.2(three@0.154.0))(three@0.154.0):
     dependencies:
       postprocessing: 6.32.2(three@0.154.0)
       three: 0.154.0
 
-  nano-css@5.3.5(react-dom@18.2.0)(react@18.2.0):
+  nano-css@5.3.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       css-tree: 1.1.3
       csstype: 3.1.2
@@ -4145,13 +4158,13 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  next-themes@0.2.1(next@13.4.7)(react-dom@18.2.0)(react@18.2.0):
+  next-themes@0.2.1(next@13.4.7(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
-      next: 13.4.7(react-dom@18.2.0)(react@18.2.0)
+      next: 13.4.7(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
 
-  next@13.4.7(react-dom@18.2.0)(react@18.2.0):
+  next@13.4.7(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@next/env': 13.4.7
       '@swc/helpers': 0.5.1
@@ -4341,8 +4354,9 @@ snapshots:
   postcss-load-config@4.0.1(postcss@8.4.24):
     dependencies:
       lilconfig: 2.1.0
-      postcss: 8.4.24
       yaml: 2.3.1
+    optionalDependencies:
+      postcss: 8.4.24
 
   postcss-nested@6.0.1(postcss@8.4.24):
     dependencies:
@@ -4418,13 +4432,13 @@ snapshots:
       react: 18.2.0
       tslib: 2.6.0
 
-  react-use-measure@2.1.1(react-dom@18.2.0)(react@18.2.0):
+  react-use-measure@2.1.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       debounce: 1.2.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
 
-  react-use@17.4.0(react-dom@18.2.0)(react@18.2.0):
+  react-use@17.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@types/js-cookie': 2.2.7
       '@xobotyi/scrollbar-width': 1.9.5
@@ -4432,7 +4446,7 @@ snapshots:
       fast-deep-equal: 3.1.3
       fast-shallow-equal: 1.0.0
       js-cookie: 2.2.1
-      nano-css: 5.3.5(react-dom@18.2.0)(react@18.2.0)
+      nano-css: 5.3.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-universal-interface: 0.6.2(react@18.2.0)(tslib@2.6.0)
@@ -4957,5 +4971,5 @@ snapshots:
   zstddec@0.0.2: {}
 
   zustand@3.7.2(react@18.2.0):
-    dependencies:
+    optionalDependencies:
       react: 18.2.0
